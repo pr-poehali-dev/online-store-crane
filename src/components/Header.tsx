@@ -8,8 +8,18 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#1A1F2C] text-white py-4 sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="relative text-white py-4 sticky top-0 z-50">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1561216166-aba95a0ab26a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+          alt="Тельфер электрический канатный" 
+          className="w-full h-full object-cover brightness-25 blur-[1px]"
+        />
+        <div className="absolute inset-0 bg-[#1A1F2C] bg-opacity-85"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-[#9b87f5]">
